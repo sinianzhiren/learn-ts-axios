@@ -33,8 +33,12 @@ router.get('/simple/get', (req, res) => {
     })
 })
 
+router.get('/base/get', (req, res) => {
+    res.json(req.query);
+})
 
-const port = process.env.PORT || 8080;
+
+const port = process.env.PORT || 8081;
 module.exports = app.listen(port, () => {
     console.log(`server listening on http://127.0.0.1:${port}, ctrl + c to stop`);
 })
